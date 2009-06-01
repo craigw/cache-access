@@ -3,8 +3,8 @@ Cache Access
 
 A configuration and access point for the Cache. Can be used by Rails as a fragment cache thus:
 
-    config.cache_store = BarkingIguaua::Cache.rails_configuration
+    config.cache_store = BarkingIguaua::CacheAccess.rails_configuration
 
 Or directly if you'd prefer:
 
-    Cache.get(:key) # => :value
+    CacheAccess.get(:key) # => :value

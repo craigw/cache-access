@@ -1,5 +1,5 @@
 module BarkingIguana
-  class Cache
+  class CacheAccess
     include Singleton
 
     # Proxy everything to the cache instance.
@@ -12,7 +12,7 @@ module BarkingIguana
     class << self
       # Proxy everytning to the singleton instance so we can do eg
       #
-      #     Cache.get_multi(:foo, :bar)
+      #     BarkingIguana::CacheAccess.get_multi(:foo, :bar)
       #
       def method_missing(method_name, *args)
         instance.send(method_name, *args)
