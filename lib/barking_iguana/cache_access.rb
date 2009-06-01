@@ -36,8 +36,8 @@ module BarkingIguana
 
       def default_memcache_configuration
         { 
-          :hosts => %W(127.0.0.1:11211),
-          :namespace => File.basename(File.expand_path(RAILS_ROOT))
+          'hosts' => %W(127.0.0.1:11211),
+          'namespace' => File.basename(File.expand_path(RAILS_ROOT))
         }
       end
     end
