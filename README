@@ -1,0 +1,10 @@
+Cache Access
+============
+
+A configuration and access point for the Cache. Can be used by Rails as a fragment cache thus:
+
+    config.cache_store = BarkingIguaua::Cache.rails_configuration
+
+Or directly if you'd prefer:
+
+    Cache.get(:key) # => :value
